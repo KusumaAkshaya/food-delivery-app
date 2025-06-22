@@ -3,7 +3,7 @@
 import DishCard from './DishCard';
 
 const categories = [
-  { label: 'Biryani', image: '/images/biryani.jpg' },
+  { label: 'Biryani', image: '/images/biriyani.jpg' },
   { label: 'South Indian', image: '/images/south.jpg' },
   { label: 'North Indian', image: '/images/north.jpg' },
   { label: 'Cake', image: '/images/cake.jpg' },
@@ -22,10 +22,10 @@ const categories = [
 export default function DishList()
 {
     return(
-        <div>
+        <div className="grid grid-rows-2 grid-flow-col gap-8 justify-items-center p-10 overflow-x-scroll" >
            {categories.map((item, index) => 
         (
-            <DishCard  image={categories[index].image} label={categories[index].label} />
+            <DishCard  image={item.image} label={item.label} key={index} />
         ))}
         </div>
     )
