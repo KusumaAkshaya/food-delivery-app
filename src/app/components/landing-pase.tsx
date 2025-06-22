@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import SearchBar from "./searchBar";
 
 export default function LandingPage() {
   return (
@@ -7,6 +8,7 @@ export default function LandingPage() {
       <div className="h-[calc(100vh-105px)] w-full flex flex-col items-center justify-center" style={{backgroundColor : 'rgba(0, 0, 0, 0.4)'}} >
         <h1 className="text-white md:text-5xl text-7xl font-bold "  >FoodieExpress</h1>
         <p className="description text-white text-4xl " >Find the best restaurants, cafés and bars in India</p>
+        <div className="flex items-center" ><SearchBar  /> </div>
       </div>
     </div>
   );
