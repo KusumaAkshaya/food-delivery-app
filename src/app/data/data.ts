@@ -621,7 +621,7 @@ export const dummyDishes = [
   },
   {
     "name": "Aloo Gobi",
-    "image": "/images/dishes/dish18.jpg",
+    "image": "/images/dishes/ag.jpg",
     "price": 270,
     "description": "Homestyle preparation",
     "rating": 4.8,
@@ -651,7 +651,7 @@ export const dummyDishes = [
   },
   {
     "name": "Veg Pulao",
-    "image": "/images/dishes/vp.jpg",
+    "image": "/images/dishes/vb.jpg",
     "price": 109,
     "description": "Rich in flavor",
     "rating": 4.7,
@@ -681,7 +681,7 @@ export const dummyDishes = [
   },
   {
     "name": "Tandoori Roti",
-    "image": "/images/dishes/dish9.jpg",
+    "image": "/images/dishes/tr.jpg",
     "price": 236,
     "description": "Rich in flavor",
     "rating": 4.9,

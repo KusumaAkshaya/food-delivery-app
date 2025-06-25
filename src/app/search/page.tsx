@@ -56,7 +56,7 @@ export default function SearchData() {
                  <Image src='/logo.jpg' alt="logo" width={150} height={50} />
                  <div className="w-100" > <SearchBar /></div>
                  <div className="text-3xl rounded-full hover:bg-gray-200 p-2" ><Link href='/cart' >🛒</Link></div>
-                 
+                 <div className=" rounded-full hover:bg-gray-200 p-2" ><Link href='/' >Home</Link></div>
                </nav>
                 {message && (
                     <div className="fixed right-4 bg-green-500 text-white p-4 rounded shadow-lg text-sm animate-bounce z-50">{message}</div>
@@ -67,7 +67,8 @@ export default function SearchData() {
                         !isLoggedIn ? (<p>Please <Link href='/login' className="text-gray-500" >Login</Link> before search</p>) : 
                         ( filteredData.length > 0 ?
                             (
-                                filteredData.map((item, index) => {
+                    
+                             filteredData.map((item, index) => {
                                     return (
                                         <div className="bg-gray-50 p-4 rounded-xl shadow hover:scale-105 transition-transform duration-300 max-w-75 flex flex-col" key={index} >
                                             <div className="w-52 h-50 overflow-hidden">
@@ -85,7 +86,7 @@ export default function SearchData() {
                                             </div>
                                         </div>
                                     )
-                                })
+                                } )
                             ) :
                             (
                                 <p>No results found</p>

@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv"
 import router from './routers/users.js';
+import orderRouter from './routers/orders.js';
 
 const app = express()
 dotenv.config()
@@ -14,6 +15,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => console.log("MongoDB connection error: ", err));
 
 app.use('/users', router);
+app.use('/orders', orderRouter)
 
 app.listen(5000, () => {
     console.log('server started');

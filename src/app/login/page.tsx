@@ -56,9 +56,9 @@ useEffect( () =>
 
                    if(res.ok)
                    {
-                      setLoad(false);
+                       setLoad(false);
                        localStorage.setItem("isLoggedIn", "true");
-                       localStorage.setItem("userId", "email")
+                       localStorage.setItem("userId", email);
                       alert(responseData.message);
                       router.push('/');
                    }
@@ -77,11 +77,11 @@ useEffect( () =>
             }} >
              <div className="flex flex-col mb-3" >
                 <label >Email</label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="border-1 p-1 min-w-75 rounded-2xl " />
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="border-1 p-1 min-w-75 rounded-2xl " required />
             </div>
             <div className="flex flex-col mb-3" >
                 <label >Password</label>
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="border-1 p-1 min-w-75 rounded-2xl" />
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="border-1 p-1 min-w-75 rounded-2xl" required />
             </div>
             <button type="submit" className="text-white bg-gray-400 w-full rounded-2xl mt-3 p-1" >Login</button>
              {load && <div className="flex justify-center items-center mt-3 ">
@@ -100,7 +100,7 @@ useEffect( () =>
             <button type="submit" className="text-white bg-gray-400 rounded-2xl mt-3 px-6 py-2">
                <Link href="/register" >Sign Up</Link>
             </button>
-            
+            <p className="text-center mt-4" >Go back <Link href='/' className="text-gray-500" >Home</Link></p>
             
          </div>
 
