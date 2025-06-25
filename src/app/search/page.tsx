@@ -8,7 +8,8 @@ import { addCartItem } from "../utils/cardUtils";
 import Link from 'next/link';
 import { motion, AnimatePresence } from "framer-motion"
 import { dummyDishes } from '../data/data';
-import {useRouter} from 'next/navigation'; 
+import {useRouter} from 'next/navigation';
+import { Suspense } from 'react' 
 
 
 type Dish = {
@@ -50,6 +51,7 @@ export default function SearchData() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === "true";
 
     return (
+         <Suspense>
         <section className="search bg-gray-100 min-h-screen ">
             <div>
                <nav className="flex flex-row justify-between gap-4 mb-4 bg-white items-center shadow-md " > 
@@ -95,6 +97,7 @@ export default function SearchData() {
                 </div>
             </div>
         </section>
+        </Suspense>
     )
 
 }
