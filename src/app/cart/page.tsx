@@ -4,7 +4,7 @@ import { getCartItems, clearCart, removeFromCart } from "../utils/cardUtils"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import {useRouter} from "next/navigation"
+import { useRouter } from "next/navigation"
 
 export default function CartPage() {
     const [cart, setCart] = useState<any[]>([])
@@ -40,6 +40,10 @@ export default function CartPage() {
         setCart(newCart);
         localStorage.setItem('cart', JSON.stringify(newCart));
     }
+
+    const handlePlaceOrder = async (e : any) => {
+            e.preventDefault();
+        }
 
     const router = useRouter();
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -83,37 +87,10 @@ export default function CartPage() {
                                 <input type="text" placeholder="Delihery Address" className="border-b p-2" required />
                                 <input type='text' placeholder="LandMark" className="border-b p-2 " required />
                                 <button type="submit"
-                                    onClick={async (e) => {
-                                        e.preventDefault();
-
-                                        try {
-                                            const res = await fetch('http://localhost:5000/orders/placeorder', {
-                                                method: 'POST',
-                                                headers: { 'Content-Type': 'application/json' },
-                                                body: JSON.stringify({
-                                                    userId: localStorage.getItem('userId'),
-                                                    items: cart,
-                                                    totalPrice: totalPrice,
-                                                }),
-                                            })
-                                            if (res.ok) {
-                                                alert("Order placed successfully!");
-                                                clearCart();
-                                                setCart([]);
-                                                window.location.href = '/placeOrder'
-                                            } else {
-                                                alert("Failed to place order");
-                                            }
-                                        }
-                                        catch (error) {
-                                            console.error("Order error:", error);
-                                            alert("Something went wrong!");
-                                        }
-
-                                    }}
+                                    onClick={clearCart}
                                     className="bg-green-500 text-white px-6 py-2 rounded mt-4"
                                 >
-                                    <Link href='#' > Proceed to Pay (Mock) </Link>
+                                    <button> Proceed to Pay (Mock) </button>
                                 </button>
                             </form>
                         </div>
