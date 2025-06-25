@@ -16,7 +16,6 @@ export default function Navbar()
     }
     
     useEffect(() => {
-    // This runs only on client
     const userId = typeof window !== 'undefined' && localStorage.getItem("userId");
     if (userId) {
       setLogin(true);
@@ -40,3 +39,4 @@ export default function Navbar()
         </nav>
     )
 }
+
