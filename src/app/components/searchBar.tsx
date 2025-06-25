@@ -2,12 +2,10 @@
 import { div } from "framer-motion/client"
 import {useRouter} from "next/navigation"
 
-
 export default function SearchBar()
 {
-
     const router = useRouter();
-    const isLoggedIn = localStorage.getItem('auth') === 'true';
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
     const handleSearch = (e:any) => 
     {

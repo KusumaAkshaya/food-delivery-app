@@ -10,13 +10,11 @@ const categories = [
   { label: 'Rolls', image: '/images/roll.jpg' },
   { label: 'Burger', image: '/images/burger.jpg' },
   { label: 'Pizza', image: '/images/pizza.jpg' },
-  { label: 'Dosa', image: '/images/dosa.jpg' },
+  { label: 'Chicken', image: '/images/chicken.jpg' },
   { label: 'Salad', image: '/images/salad.jpg' },
-  { label: 'Kebab', image: '/images/kebab.jpg' },
-  { label: 'Paratha', image: '/images/paratha.jpg' },
-  { label: 'Pure Veg', image: '/images/veg.jpg' },
-  { label: 'Noodles', image: '/images/noodles.jpg' },
-  { label: 'Pasta', image: '/images/pasta.jpg' },
+  { label: 'Mutton', image: '/images/mutton.jpg' },
+  { label: 'Roti', image: '/images/dishes/tr.jpg' },
+  { label: 'Veg Biryani', image: '/images/dishes/vb.jpg' },
 ];
 
 export default function DishList()

@@ -1,5 +1,7 @@
 'use client';
 import Image from "next/image"
+import Link from "next/link"
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -19,6 +21,7 @@ const imageSRC = [
 export default function LoginPage() {
 
 const [index, setIndex] = useState(0);
+const router = useRouter();
     
 useEffect( () =>
 {
@@ -30,19 +33,47 @@ useEffect( () =>
 
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
+   const [load, setLoad] = useState(false);
 
     return (
       <div className="flex h-screen items-center justify-center bg-gray-100" >
          <div className="login-left w-full md:w-1/2 flex flex-col items-center shadow-xl bg-white pt-10 pb-10 h-3/4">
             <h2 className="text-2xl" >FoodieExpress</h2>
-            <form action="" className="content-left p-5" onSubmit={ (e) => {
+            <form action="" className="content-left p-5" onSubmit={async (e) => {
                 e.preventDefault();
+                setLoad(true);
+                try
+                {
+                   const res = await fetch("http://localhost:5000/users/login", {
+                    method: 'POST',
+                    headers: {
+                       'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({email, password}),
+                   });
 
-                localStorage.setItem('auth', 'true');
-                localStorage.setItem('email', email);
-                localStorage.setItem('password', password);
+                   const responseData = await res.json();
 
-                window.location.href = '/'
+                   if(res.ok)
+                   {
+                      setLoad(false);
+                       localStorage.setItem("isLoggedIn", "true");
+                       localStorage.setItem("userId", "email")
+                      alert(responseData.message);
+                      router.push('/');
+                   }
+                   else
+                   {
+                      setLoad(false);
+                      alert(responseData.message);
+                   }
+                }
+                catch(error)
+                {
+                    setLoad(false);
+                    alert('Something went wrong');
+                    console.log("error: ",  error);
+                }
             }} >
              <div className="flex flex-col mb-3" >
                 <label >Email</label>
@@ -53,11 +84,23 @@ useEffect( () =>
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="border-1 p-1 min-w-75 rounded-2xl" />
             </div>
             <button type="submit" className="text-white bg-gray-400 w-full rounded-2xl mt-3 p-1" >Login</button>
-            < p className="text-center mt-6" >create new account?</p>
-            <button type="submit" className="text-white bg-gray-400 w-full rounded-2xl mt-3 p-1">
-                 Sign Up
-            </button>
+             {load && <div className="flex justify-center items-center mt-3 ">
+            <motion.div
+                className="border-t-4 border-gray-400 w-10 h-10 rounded-full "
+                animate={{ rotate: 360 }}
+                transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "linear",
+                }}
+            />
+           </div>}
             </form>
+            < p className="text-center mt-6" >create new account?</p>
+            <button type="submit" className="text-white bg-gray-400 rounded-2xl mt-3 px-6 py-2">
+               <Link href="/register" >Sign Up</Link>
+            </button>
+            
             
          </div>
 

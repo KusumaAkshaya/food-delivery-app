@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import {restaurentList} from '../data/restaurentData'
 
 export default function Restaurents()
@@ -12,7 +13,9 @@ export default function Restaurents()
             <div>
                 <div className="flex flex-row p-10 overflow-x-scroll gap-10" >
                     {restaurentList.map((item, index) => (
-                        <div key={index} className="flex flex-col shadow-lg rounded-sm " >
+                        <Link href={`/restaurant/${item.rname}`} key={index}>
+                        
+                        <div  className="flex flex-col shadow-lg rounded-sm h-90" >
                             <div className="w-75 h-3/5" >
                                 <Image src={item.image} alt={item.name} width={200} height={200} className="object-cover w-full h-full rounded-sm" />
                             </div>
@@ -23,6 +26,7 @@ export default function Restaurents()
                                 <p>⭐{item.rating}</p>
                             </div>
                         </div>
+                        </Link>
                     ))}
                 </div>
             </div>
