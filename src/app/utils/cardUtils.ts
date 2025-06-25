@@ -1,3 +1,11 @@
+type Item = {
+  name: string;
+  price: number;
+  quantity: number;
+  restaurant: string;
+  image?: string;
+};
+
 export function getCartItems()
 {
     if(typeof window === 'undefined') return[]; // if this runs at server, there is no window, no cart access on server
@@ -16,7 +24,7 @@ export function addCartItem(item: any)
         cart = [];
     }
 
-    const alreadyExist = cart.findIndex( i => i.name === item.name && i.restaurant === item.restaurant) ;
+    const alreadyExist = cart.findIndex( (i: Item )=> i.name === item.name && i.restaurant === item.restaurant) ;
     
     if(alreadyExist !== -1)
     {
