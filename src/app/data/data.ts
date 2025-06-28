@@ -185,7 +185,7 @@ export const dummyDishes = [
   // Beverages for Spice Hub
   {
     "name": "Sweet Lassi",
-    "image": "/images/dishes/lassi.jpg",
+    "image": "/images/dishes/sl.jpg",
     "price": 70,
     "description": "Refreshing sweet yogurt drink",
     "rating": 4.2,
@@ -198,7 +198,7 @@ export const dummyDishes = [
   },
   {
     "name": "Masala Chai",
-    "image": "/images/dishes/chai.jpg",
+    "image": "/images/dishes/mc.jpg",
     "price": 40,
     "description": "Classic Indian tea with spices",
     "rating": 4.5,
@@ -211,7 +211,7 @@ export const dummyDishes = [
   },
   {
     "name": "Cold Coffee",
-    "image": "/images/dishes/coldcoffee.jpg",
+    "image": "/images/dishes/cc.png",
     "price": 90,
     "description": "Chilled coffee with ice cream",
     "rating": 4.3,
@@ -409,7 +409,7 @@ export const dummyDishes = [
   // Beverages for Green Delight
   {
     "name": "Fresh Lime Soda",
-    "image": "/images/dishes/lime.jpg",
+    "image": "/images/dishes/ls.jpg",
     "price": 60,
     "description": "Refreshing lemon drink",
     "rating": 4.1,
@@ -421,21 +421,8 @@ export const dummyDishes = [
     "category": "beverages"
   },
   {
-    "name": "Jaljeera",
-    "image": "/images/dishes/jaljeera.jpg",
-    "price": 50,
-    "description": "Spicy tangy Indian drink",
-    "rating": 4.0,
-    "quantity": 1,
-    "restaurant": "greendelight",
-    "restaurantname": "Green Delight",
-    "veg": true,
-    "offer": "",
-    "category": "beverages"
-  },
-  {
     "name": "Rose Milk",
-    "image": "/images/dishes/rosemilk.jpg",
+    "image": "/images/dishes/rm.jpg",
     "price": 70,
     "description": "Chilled rose flavored milk",
     "rating": 4.3,
@@ -620,7 +607,7 @@ export const dummyDishes = [
   // Beverages for Tandoori Junction
   {
     "name": "Mango Lassi",
-    "image": "/images/dishes/mangolassi.jpg",
+    "image": "/images/dishes/ml.jpg",
     "price": 80,
     "description": "Sweet mango yogurt drink",
     "rating": 4.4,
@@ -632,21 +619,8 @@ export const dummyDishes = [
     "category": "beverages"
   },
   {
-    "name": "Buttermilk",
-    "image": "/images/dishes/buttermilk.jpg",
-    "price": 50,
-    "description": "Spiced Indian buttermilk",
-    "rating": 4.2,
-    "quantity": 1,
-    "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction",
-    "veg": true,
-    "offer": "",
-    "category": "beverages"
-  },
-  {
     "name": "Thums Up",
-    "image": "/images/dishes/thumsup.jpg",
+    "image": "/images/dishes/tu.jpg",
     "price": 40,
     "description": "Popular fizzy drink",
     "rating": 4.0,
@@ -921,8 +895,8 @@ export const dummyDishes = [
   },
   // Beverages for Curry Leaf
   {
-    "name": "Filter Coffee",
-    "image": "/images/dishes/filtercoffee.jpg",
+    "name": "Cold Coffee",
+    "image": "/images/dishes/cc.png",
     "price": 50,
     "description": "South Indian filter coffee",
     "rating": 4.6,
@@ -935,7 +909,7 @@ export const dummyDishes = [
   },
   {
     "name": "Badam Milk",
-    "image": "/images/dishes/badammilk.jpg",
+    "image": "/images/dishes/bm.jpg",
     "price": 70,
     "description": "Almond flavored milk",
     "rating": 4.4,
@@ -944,19 +918,6 @@ export const dummyDishes = [
     "restaurantname": "Curry Leaf",
     "veg": true,
     "offer": "",
-    "category": "beverages"
-  },
-  {
-    "name": "Nimbu Pani",
-    "image": "/images/dishes/nimbupani.jpg",
-    "price": 40,
-    "description": "Lemonade with mint",
-    "rating": 4.2,
-    "quantity": 1,
-    "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf",
-    "veg": true,
-    "offer": "buy1get1",
     "category": "beverages"
   },
 
@@ -1116,46 +1077,6 @@ export const dummyDishes = [
     "veg": true,
     "offer": "",
     "category": "dessert"
-  },
-  // Beverages for Veggie Vibes
-  {
-    "name": "Aam Panna",
-    "image": "/images/dishes/aampanna.jpg",
-    "price": 60,
-    "description": "Raw mango summer drink",
-    "rating": 4.5,
-    "quantity": 1,
-    "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes",
-    "veg": true,
-    "offer": "",
-    "category": "beverages"
-  },
-  {
-    "name": "Coconut Water",
-    "image": "/images/dishes/coconutwater.jpg",
-    "price": 50,
-    "description": "Fresh coconut water",
-    "rating": 4.7,
-    "quantity": 1,
-    "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes",
-    "veg": true,
-    "offer": "",
-    "category": "beverages"
-  },
-  {
-    "name": "Chaas",
-    "image": "/images/dishes/chaas.jpg",
-    "price": 40,
-    "description": "Spiced buttermilk",
-    "rating": 4.3,
-    "quantity": 1,
-    "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes",
-    "veg": true,
-    "offer": "buy1get1",
-    "category": "beverages"
   },
 
   // Meat-And-More
@@ -1383,7 +1304,7 @@ export const dummyDishes = [
   // Beverages for Meat-And-More
   {
     "name": "Pepsi",
-    "image": "/images/dishes/pepsi.jpg",
+    "image": "/images/dishes/ps.jpg",
     "price": 40,
     "description": "Chilled soft drink",
     "rating": 4.0,
@@ -1395,21 +1316,8 @@ export const dummyDishes = [
     "category": "beverages"
   },
   {
-    "name": "Red Bull",
-    "image": "/images/dishes/redbull.jpg",
-    "price": 120,
-    "description": "Energy drink",
-    "rating": 4.2,
-    "quantity": 1,
-    "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More",
-    "veg": true,
-    "offer": "",
-    "category": "beverages"
-  },
-  {
     "name": "Sweet Lassi",
-    "image": "/images/dishes/lassi.jpg",
+    "image": "/images/dishes/sl.jpg",
     "price": 70,
     "description": "Refreshing sweet yogurt drink",
     "rating": 4.2,

@@ -37,7 +37,7 @@ export default function SearchData() {
 
     useEffect(() => {
         let matches = dummyDishes.filter(
-            d => d.name.toLowerCase().includes(query.toLowerCase()) || d.restaurantname.toLowerCase().includes(query.toLowerCase()),
+            d => d.name.toLowerCase().includes(query.toLowerCase()) || d.restaurantname.toLowerCase().includes(query.toLowerCase()) || d.category.toLowerCase().includes(query.toLowerCase()),
         );
 
         if(applyFilter.veg)
@@ -89,13 +89,10 @@ export default function SearchData() {
                 <div className="" >
                     {
                         !isLoggedIn ? (<p>Please <Link href='/login' className="text-gray-500" >Login</Link> before search</p>) :
-                            (filteredData.length > 0 ?
-                                (
-                                    <>
-                                        <h2 className="text-center text-gray-800 lobster-two-regular-italic capitalize" >Results for <span className="text-orange-500" >{query}</span> from top restaurants </h2>
-                                         <div className="flex flow-row w-full justify-center" >
-                                        <div className="hidden lg:block bg-white min-w-75 h-screen text-center text-2xl" >
-                                            <aside className=" bg-orange-100 h-screen" >
+                            (  <div className="flex flow-row w-full justify-center" > 
+
+                                <div className=" left-15 hidden lg:block min-w-75 text-center text-2xl" >
+                                            <aside className="overflow-auto bg-orange-100 h-screen" >
                                                 <h2 className="text-gray-600 border-b border-orange-500 py-4 text-3xl caveat mx-3" >Filters</h2>
                                                 <ul>
                                                     <li className='py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({... prev, veg: !prev.veg}))}>Veg only</li>
@@ -104,8 +101,18 @@ export default function SearchData() {
                                                     <li className='py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, category: 'Desserts'}))}>Desserts</li>
                                                     <li className='py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, category: 'Beverages'}))}>Beverages</li>
                                                 </ul>
+                                                 <button className='bg-red-500 text-white rounded hover:scale-110 px-3 py-1' onClick={() => setApplyFilter({veg: false, buy1get1: false, below250: false, category: ''})} >
+                                                    Clear Filters
+                                                 </button>
+                                                
                                             </aside>
                                         </div>
+                                
+                               { filteredData.length > 0 ?
+                                (
+                                    <div>
+                                        <h2 className="text-center text-gray-800 lobster-two-regular-italic capitalize" >Results for <span className="text-orange-500" >{query}</span> from top restaurants </h2>
+                                         <div className="flex flow-row w-full justify-center" >
                                         <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-flow-rows gap-6 p-4 justify-items-center" >
                                             {filteredData.map((item, index) => {
                                                 return (
@@ -127,11 +134,15 @@ export default function SearchData() {
                                                 )
                                             })}
                                         </div>
-                                    </div> </>
+                                    </div> </div>
                                 ) :
-                                (
-                                    <p>No results found</p>
-                                ))
+                                (   
+                                    <div className="lg:w-5/10" >
+                                    <p className='text-center text-2xl'> No Matching dishes found</p>
+                                    </div>
+                                )}
+                                
+                                </div>)
                     }
                 </div>
             </div>
