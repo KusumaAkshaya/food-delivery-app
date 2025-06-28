@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
+const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
 
 export default function CartPage() {
     const [cart, setCart] = useState<any[]>([])
@@ -65,7 +66,7 @@ const handlePlaceOrder = async (e: React.FormEvent) => {
   };
 
   try {
-    const response = await fetch("http://localhost:5000/orders/placeorder", {
+    const response = await fetch(`${baseUrl}/orders/placeorder`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

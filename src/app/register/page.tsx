@@ -4,6 +4,8 @@ import Image from "next/image"
 import Link from 'next/link'
 import { useRouter } from "next/navigation"
 
+const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+
 export default function Register() {
     const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
     const router = useRouter();
@@ -28,7 +30,7 @@ export default function Register() {
                     setError('');
 
                     try {
-                        const res = await fetch("http://localhost:5000/users/register", {
+                        const res = await fetch(`${baseUrl}/users/register`, {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',

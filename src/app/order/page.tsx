@@ -18,6 +18,8 @@ type PrevOrder = {
   date: string;
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+
 export default function Order() {
   const [orders, setOrders] = useState<PrevOrder[]>([]);
 
@@ -27,7 +29,7 @@ export default function Order() {
 
     const fetchOrders = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/orders/${user}`);
+        const res = await fetch(`${baseUrl}/orders/${user}`);
         const data = await res.json();
         if (data.success) {
           setOrders(data.orders);

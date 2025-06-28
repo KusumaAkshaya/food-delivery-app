@@ -17,6 +17,8 @@ const imageSRC = [
     }
 ]
 
+const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+
 
 export default function LoginPage() {
 
@@ -44,7 +46,7 @@ useEffect( () =>
                 setLoad(true);
                 try
                 {
-                   const res = await fetch("http://localhost:5000/users/login", {
+                   const res = await fetch(`${baseUrl}/users/login`, {
                     method: 'POST',
                     headers: {
                        'Content-Type': 'application/json',
