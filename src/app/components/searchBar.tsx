@@ -3,6 +3,7 @@ import { div } from "framer-motion/client"
 import {useRouter} from "next/navigation"
 import {useState, useEffect} from "react"
 
+
 export default function SearchBar()
 {
     const router = useRouter();
@@ -13,9 +14,8 @@ export default function SearchBar()
         e.preventDefault();
         const query = e.target.elements.search.value;
         const status = localStorage.getItem('isLoggedIn') === 'true';
-        setIsLoggedIn(status);
 
-        if(!isLoggedIn)
+        if(!status)
         {
             router.push('/login');
             return;
@@ -25,8 +25,8 @@ export default function SearchBar()
     }
 
     return(
-        <form className="w-full m-2 rounded-lg" onSubmit={handleSearch} >
-            <input placeholder="Search here.. " className="bg-white text-black border-1 p-1 rounded-lg w-4/5 m-2" type="text" name="search" />
+        <form className="w-full" onSubmit={handleSearch} >
+            <input placeholder="Search here..  " className="bg-white text-black border-1 p-1 rounded-2xl w-95/100 m-2 focus-none " type="text" name="search" />
         </form>
     )
 }

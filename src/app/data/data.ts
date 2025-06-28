@@ -1,4 +1,5 @@
 export const dummyDishes = [
+  // Spice Hub
   {
     "name": "Paneer Butter Masala",
     "image": "/images/dishes/pbm.jpg",
@@ -7,7 +8,10 @@ export const dummyDishes = [
     "rating": 4.8,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "curry"
   },
   {
     "name": "Chole Bhature",
@@ -17,7 +21,10 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Veg Biryani",
@@ -27,7 +34,10 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "",
+    "category": "biryani"
   },
   {
     "name": "Aloo Gobi",
@@ -37,7 +47,10 @@ export const dummyDishes = [
     "rating": 4.3,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Matar Paneer",
@@ -47,7 +60,10 @@ export const dummyDishes = [
     "rating": 3.9,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Palak Paneer",
@@ -57,7 +73,10 @@ export const dummyDishes = [
     "rating": 3.9,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Veg Pulao",
@@ -67,7 +86,10 @@ export const dummyDishes = [
     "rating": 3.5,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "",
+    "category": "rice"
   },
   {
     "name": "Dal Makhani",
@@ -77,7 +99,10 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "",
+    "category": "dal"
   },
   {
     "name": "Chicken Curry",
@@ -87,7 +112,10 @@ export const dummyDishes = [
     "rating": 3.6,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": false,
+    "offer": "buy1get1",
+    "category": "curry"
   },
   {
     "name": "Mutton Biryani",
@@ -97,7 +125,10 @@ export const dummyDishes = [
     "rating": 3.7,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": false,
+    "offer": "",
+    "category": "biryani"
   },
   {
     "name": "Egg Curry",
@@ -107,7 +138,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Fish Fry",
@@ -117,7 +151,10 @@ export const dummyDishes = [
     "rating": 4.4,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Chicken 65",
@@ -127,7 +164,10 @@ export const dummyDishes = [
     "rating": 4.5,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Fish Curry",
@@ -137,8 +177,53 @@ export const dummyDishes = [
     "rating": 3.6,
     "quantity": 1,
     "restaurant": "spicehub",
-    "restaurantname": "Spice Hub"
+    "restaurantname": "Spice Hub",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
+  // Beverages for Spice Hub
+  {
+    "name": "Sweet Lassi",
+    "image": "/images/dishes/lassi.jpg",
+    "price": 70,
+    "description": "Refreshing sweet yogurt drink",
+    "rating": 4.2,
+    "quantity": 1,
+    "restaurant": "spicehub",
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Masala Chai",
+    "image": "/images/dishes/chai.jpg",
+    "price": 40,
+    "description": "Classic Indian tea with spices",
+    "rating": 4.5,
+    "quantity": 1,
+    "restaurant": "spicehub",
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Cold Coffee",
+    "image": "/images/dishes/coldcoffee.jpg",
+    "price": 90,
+    "description": "Chilled coffee with ice cream",
+    "rating": 4.3,
+    "quantity": 1,
+    "restaurant": "spicehub",
+    "restaurantname": "Spice Hub",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "beverages"
+  },
+
+  // Green Delight
   {
     "name": "Paneer Butter Masala",
     "image": "/images/dishes/pbm.jpg",
@@ -147,7 +232,10 @@ export const dummyDishes = [
     "rating": 4.9,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "curry"
   },
   {
     "name": "Chole Bhature",
@@ -157,7 +245,10 @@ export const dummyDishes = [
     "rating": 3.6,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Veg Biryani",
@@ -167,7 +258,10 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "biryani"
   },
   {
     "name": "Matar Paneer",
@@ -177,7 +271,10 @@ export const dummyDishes = [
     "rating": 4.2,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Rajma Chawal",
@@ -187,7 +284,10 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "rice"
   },
   {
     "name": "Veg Pulao",
@@ -197,7 +297,10 @@ export const dummyDishes = [
     "rating": 3.5,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "rice"
   },
   {
     "name": "Dal Makhani",
@@ -207,7 +310,10 @@ export const dummyDishes = [
     "rating": 4.5,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "dal"
   },
   {
     "name": "Baingan Bharta",
@@ -217,7 +323,10 @@ export const dummyDishes = [
     "rating": 3.7,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Kadai Paneer",
@@ -227,7 +336,10 @@ export const dummyDishes = [
     "rating": 4.3,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Malai Kofta",
@@ -237,7 +349,10 @@ export const dummyDishes = [
     "rating": 3.7,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Dum Aloo",
@@ -247,7 +362,10 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Mixed Veg Curry",
@@ -257,7 +375,10 @@ export const dummyDishes = [
     "rating": 3.7,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Gulab Jamun",
@@ -267,7 +388,10 @@ export const dummyDishes = [
     "rating": 4.2,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "dessert"
   },
   {
     "name": "Kaju Katli",
@@ -277,8 +401,53 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "greendelight",
-    "restaurantname": "Green Delight"
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "dessert"
   },
+  // Beverages for Green Delight
+  {
+    "name": "Fresh Lime Soda",
+    "image": "/images/dishes/lime.jpg",
+    "price": 60,
+    "description": "Refreshing lemon drink",
+    "rating": 4.1,
+    "quantity": 1,
+    "restaurant": "greendelight",
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Jaljeera",
+    "image": "/images/dishes/jaljeera.jpg",
+    "price": 50,
+    "description": "Spicy tangy Indian drink",
+    "rating": 4.0,
+    "quantity": 1,
+    "restaurant": "greendelight",
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Rose Milk",
+    "image": "/images/dishes/rosemilk.jpg",
+    "price": 70,
+    "description": "Chilled rose flavored milk",
+    "rating": 4.3,
+    "quantity": 1,
+    "restaurant": "greendelight",
+    "restaurantname": "Green Delight",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "beverages"
+  },
+
+  // Tandoori Junction
   {
     "name": "Chicken Curry",
     "image": "/images/dishes/cc.jpg",
@@ -287,7 +456,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Mutton Biryani",
@@ -297,7 +469,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "buy1get1",
+    "category": "biryani"
   },
   {
     "name": "Egg Curry",
@@ -307,7 +482,10 @@ export const dummyDishes = [
     "rating": 3.6,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Fish Fry",
@@ -317,7 +495,10 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Butter Chicken",
@@ -327,7 +508,10 @@ export const dummyDishes = [
     "rating": 3.7,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Chicken 65",
@@ -337,7 +521,10 @@ export const dummyDishes = [
     "rating": 4.3,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Mutton Rogan Josh",
@@ -347,7 +534,10 @@ export const dummyDishes = [
     "rating": 4.5,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Fish Curry",
@@ -357,7 +547,10 @@ export const dummyDishes = [
     "rating": 4.9,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Egg Biryani",
@@ -367,7 +560,10 @@ export const dummyDishes = [
     "rating": 3.9,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "biryani"
   },
   {
     "name": "Chicken Lollipop",
@@ -377,7 +573,10 @@ export const dummyDishes = [
     "rating": 4.5,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Chicken Korma",
@@ -387,7 +586,10 @@ export const dummyDishes = [
     "rating": 4.2,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Chicken Biryani",
@@ -397,7 +599,10 @@ export const dummyDishes = [
     "rating": 3.6,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "buy1get1",
+    "category": "biryani"
   },
   {
     "name": "Egg Roll",
@@ -407,8 +612,53 @@ export const dummyDishes = [
     "rating": 4.4,
     "quantity": 1,
     "restaurant": "tandoorijunction",
-    "restaurantname": "Tandoori Junction"
+    "restaurantname": "Tandoori Junction",
+    "veg": false,
+    "offer": "",
+    "category": "snack"
   },
+  // Beverages for Tandoori Junction
+  {
+    "name": "Mango Lassi",
+    "image": "/images/dishes/mangolassi.jpg",
+    "price": 80,
+    "description": "Sweet mango yogurt drink",
+    "rating": 4.4,
+    "quantity": 1,
+    "restaurant": "tandoorijunction",
+    "restaurantname": "Tandoori Junction",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Buttermilk",
+    "image": "/images/dishes/buttermilk.jpg",
+    "price": 50,
+    "description": "Spiced Indian buttermilk",
+    "rating": 4.2,
+    "quantity": 1,
+    "restaurant": "tandoorijunction",
+    "restaurantname": "Tandoori Junction",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Thums Up",
+    "image": "/images/dishes/thumsup.jpg",
+    "price": 40,
+    "description": "Popular fizzy drink",
+    "rating": 4.0,
+    "quantity": 1,
+    "restaurant": "tandoorijunction",
+    "restaurantname": "Tandoori Junction",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "beverages"
+  },
+
+  // Curry Leaf
   {
     "name": "Paneer Butter Masala",
     "image": "/images/dishes/pbm.jpg",
@@ -417,7 +667,10 @@ export const dummyDishes = [
     "rating": 4.4,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "curry"
   },
   {
     "name": "Chole Bhature",
@@ -427,7 +680,10 @@ export const dummyDishes = [
     "rating": 3.9,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Veg Biryani",
@@ -437,7 +693,10 @@ export const dummyDishes = [
     "rating": 3.6,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "biryani"
   },
   {
     "name": "Aloo Gobi",
@@ -447,7 +706,10 @@ export const dummyDishes = [
     "rating": 3.6,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Matar Paneer",
@@ -457,7 +719,10 @@ export const dummyDishes = [
     "rating": 4.0,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Palak Paneer",
@@ -467,7 +732,10 @@ export const dummyDishes = [
     "rating": 4.2,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Rajma Chawal",
@@ -477,7 +745,10 @@ export const dummyDishes = [
     "rating": 4.6,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "rice"
   },
   {
     "name": "Veg Pulao",
@@ -487,7 +758,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "rice"
   },
   {
     "name": "Dal Makhani",
@@ -497,7 +771,10 @@ export const dummyDishes = [
     "rating": 4.7,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "dal"
   },
   {
     "name": "Baingan Bharta",
@@ -507,7 +784,10 @@ export const dummyDishes = [
     "rating": 4.2,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Chicken Curry",
@@ -517,7 +797,10 @@ export const dummyDishes = [
     "rating": 3.7,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Mutton Biryani",
@@ -527,7 +810,10 @@ export const dummyDishes = [
     "rating": 4.8,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "buy1get1",
+    "category": "biryani"
   },
   {
     "name": "Egg Curry",
@@ -537,7 +823,10 @@ export const dummyDishes = [
     "rating": 3.9,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Fish Fry",
@@ -547,7 +836,10 @@ export const dummyDishes = [
     "rating": 3.9,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Butter Chicken",
@@ -557,7 +849,10 @@ export const dummyDishes = [
     "rating": 3.6,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Chicken 65",
@@ -567,7 +862,10 @@ export const dummyDishes = [
     "rating": 4.4,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Mutton Rogan Josh",
@@ -577,7 +875,10 @@ export const dummyDishes = [
     "rating": 4.5,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Fish Curry",
@@ -587,7 +888,10 @@ export const dummyDishes = [
     "rating": 4.6,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Egg Biryani",
@@ -597,7 +901,10 @@ export const dummyDishes = [
     "rating": 4.5,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "",
+    "category": "biryani"
   },
   {
     "name": "Chicken Lollipop",
@@ -607,8 +914,53 @@ export const dummyDishes = [
     "rating": 3.9,
     "quantity": 1,
     "restaurant": "curryleaf",
-    "restaurantname": "Curry Leaf"
+    "restaurantname": "Curry Leaf",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
+  // Beverages for Curry Leaf
+  {
+    "name": "Filter Coffee",
+    "image": "/images/dishes/filtercoffee.jpg",
+    "price": 50,
+    "description": "South Indian filter coffee",
+    "rating": 4.6,
+    "quantity": 1,
+    "restaurant": "curryleaf",
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Badam Milk",
+    "image": "/images/dishes/badammilk.jpg",
+    "price": 70,
+    "description": "Almond flavored milk",
+    "rating": 4.4,
+    "quantity": 1,
+    "restaurant": "curryleaf",
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Nimbu Pani",
+    "image": "/images/dishes/nimbupani.jpg",
+    "price": 40,
+    "description": "Lemonade with mint",
+    "rating": 4.2,
+    "quantity": 1,
+    "restaurant": "curryleaf",
+    "restaurantname": "Curry Leaf",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "beverages"
+  },
+
+  // Veggie Vibes
   {
     "name": "Paneer Butter Masala",
     "image": "/images/dishes/pbm.jpg",
@@ -617,7 +969,10 @@ export const dummyDishes = [
     "rating": 4.3,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "curry"
   },
   {
     "name": "Aloo Gobi",
@@ -627,7 +982,10 @@ export const dummyDishes = [
     "rating": 4.8,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Matar Paneer",
@@ -637,7 +995,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Rajma Chawal",
@@ -647,7 +1008,10 @@ export const dummyDishes = [
     "rating": 4.5,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "rice"
   },
   {
     "name": "Veg Pulao",
@@ -657,7 +1021,10 @@ export const dummyDishes = [
     "rating": 4.7,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "rice"
   },
   {
     "name": "Kadai Paneer",
@@ -667,7 +1034,10 @@ export const dummyDishes = [
     "rating": 3.7,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Mixed Veg Curry",
@@ -677,7 +1047,10 @@ export const dummyDishes = [
     "rating": 4.7,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Tandoori Roti",
@@ -687,7 +1060,10 @@ export const dummyDishes = [
     "rating": 4.9,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "bread"
   },
   {
     "name": "Butter Naan",
@@ -697,7 +1073,10 @@ export const dummyDishes = [
     "rating": 4.9,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "bread"
   },
   {
     "name": "Gulab Jamun",
@@ -707,7 +1086,10 @@ export const dummyDishes = [
     "rating": 4.9,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "dessert"
   },
   {
     "name": "Rasgulla",
@@ -717,7 +1099,10 @@ export const dummyDishes = [
     "rating": 4.4,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "dessert"
   },
   {
     "name": "Kaju Katli",
@@ -727,8 +1112,53 @@ export const dummyDishes = [
     "rating": 4.2,
     "quantity": 1,
     "restaurant": "veggievibes",
-    "restaurantname": "Veggie Vibes"
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "dessert"
   },
+  // Beverages for Veggie Vibes
+  {
+    "name": "Aam Panna",
+    "image": "/images/dishes/aampanna.jpg",
+    "price": 60,
+    "description": "Raw mango summer drink",
+    "rating": 4.5,
+    "quantity": 1,
+    "restaurant": "veggievibes",
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Coconut Water",
+    "image": "/images/dishes/coconutwater.jpg",
+    "price": 50,
+    "description": "Fresh coconut water",
+    "rating": 4.7,
+    "quantity": 1,
+    "restaurant": "veggievibes",
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Chaas",
+    "image": "/images/dishes/chaas.jpg",
+    "price": 40,
+    "description": "Spiced buttermilk",
+    "rating": 4.3,
+    "quantity": 1,
+    "restaurant": "veggievibes",
+    "restaurantname": "Veggie Vibes",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "beverages"
+  },
+
+  // Meat-And-More
   {
     "name": "Chicken Curry",
     "image": "/images/dishes/cc.jpg",
@@ -737,7 +1167,10 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "buy1get1",
+    "category": "curry"
   },
   {
     "name": "Mutton Biryani",
@@ -747,7 +1180,10 @@ export const dummyDishes = [
     "rating": 4.7,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "biryani"
   },
   {
     "name": "Egg Curry",
@@ -757,7 +1193,10 @@ export const dummyDishes = [
     "rating": 4.3,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Fish Fry",
@@ -767,7 +1206,10 @@ export const dummyDishes = [
     "rating": 4.7,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Butter Chicken",
@@ -777,7 +1219,10 @@ export const dummyDishes = [
     "rating": 5.0,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Chicken 65",
@@ -787,7 +1232,10 @@ export const dummyDishes = [
     "rating": 4.5,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Mutton Rogan Josh",
@@ -797,7 +1245,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Fish Curry",
@@ -807,7 +1258,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Egg Biryani",
@@ -817,7 +1271,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "biryani"
   },
   {
     "name": "Chicken Lollipop",
@@ -827,7 +1284,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Tandoori Chicken",
@@ -837,7 +1297,10 @@ export const dummyDishes = [
     "rating": 3.9,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Grilled Chicken",
@@ -847,7 +1310,10 @@ export const dummyDishes = [
     "rating": 4.0,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "starter"
   },
   {
     "name": "Chicken Korma",
@@ -857,7 +1323,10 @@ export const dummyDishes = [
     "rating": 4.1,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Prawn Masala",
@@ -867,7 +1336,10 @@ export const dummyDishes = [
     "rating": 3.8,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Chicken Biryani",
@@ -877,7 +1349,10 @@ export const dummyDishes = [
     "rating": 3.6,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "biryani"
   },
   {
     "name": "Mutton Keema",
@@ -887,7 +1362,10 @@ export const dummyDishes = [
     "rating": 4.6,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "curry"
   },
   {
     "name": "Egg Roll",
@@ -897,6 +1375,49 @@ export const dummyDishes = [
     "rating": 3.7,
     "quantity": 1,
     "restaurant": "meat-and-more",
-    "restaurantname": "Meat-And-More"
+    "restaurantname": "Meat-And-More",
+    "veg": false,
+    "offer": "",
+    "category": "snack"
+  },
+  // Beverages for Meat-And-More
+  {
+    "name": "Pepsi",
+    "image": "/images/dishes/pepsi.jpg",
+    "price": 40,
+    "description": "Chilled soft drink",
+    "rating": 4.0,
+    "quantity": 1,
+    "restaurant": "meat-and-more",
+    "restaurantname": "Meat-And-More",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Red Bull",
+    "image": "/images/dishes/redbull.jpg",
+    "price": 120,
+    "description": "Energy drink",
+    "rating": 4.2,
+    "quantity": 1,
+    "restaurant": "meat-and-more",
+    "restaurantname": "Meat-And-More",
+    "veg": true,
+    "offer": "",
+    "category": "beverages"
+  },
+  {
+    "name": "Sweet Lassi",
+    "image": "/images/dishes/lassi.jpg",
+    "price": 70,
+    "description": "Refreshing sweet yogurt drink",
+    "rating": 4.2,
+    "quantity": 1,
+    "restaurant": "meat-and-more",
+    "restaurantname": "Meat-And-More",
+    "veg": true,
+    "offer": "buy1get1",
+    "category": "beverages"
   }
-]
+];

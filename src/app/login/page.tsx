@@ -13,7 +13,7 @@ const imageSRC = [
         src: '/images/restaurants/spicehub.jpg',
     },
     {
-        src: '/images/restaurants/tandoori.jpg',
+        src: '/images/restaurants/tandoorijunction.jpg',
     }
 ]
 
@@ -108,9 +108,9 @@ useEffect( () =>
              <AnimatePresence mode="wait" >
                     <motion.div className="w-full h-full" >
                         <Image src={imageSRC[index].src} alt="login-image" className="object-cover w-full h-full" width={400} height={400} />
-                        <div className="flex justify-center">
+                        <div className="flex justify-center" >
                         {imageSRC.map((_, i) => (
-                            <motion.div className="w-3 h-3 m-5 rounded-full hidden sm:block" style={{backgroundColor: i === index ? "#000" : "#ccc"}} transition={{type:"spring", stiffness: 300}} ></motion.div>
+                            <motion.div className="w-3 h-3 m-5 rounded-full hidden sm:block" style={{backgroundColor: i === index ? "#000" : "#ccc"}} transition={{type:"spring", stiffness: 300}}  key={i}></motion.div>
                         ))}
                     </div>
                     </motion.div>

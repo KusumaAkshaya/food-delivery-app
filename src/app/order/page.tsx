@@ -42,13 +42,13 @@ export default function Order() {
 
   return (
     <div className="p-10 bg-gray-100 flex flex-col justify-center items-center">
-      <h2 className="text-2xl font-bold mb-4">Your Orders</h2>
+      <h2 className="text-2xl font-bold mb-4 text-orange-500">Your Orders</h2>
        <p className="text-center mb-4" >Go back <Link href='/' className="text-gray-500" >Home</Link></p>
 
       {orders.length === 0 ? (
         <p>No orders found.</p>
       ) : (
-        <div className="space-y-6 lg:w-1/2">
+        <div className="space-y-6 w-4/5 md:w-2/3 sm:w-2/3 lg:w-1/2">
           {orders.map((order) => (
             <div key={order._id} className="border p-4 rounded-lg bg-white shadow">
               <p className="text-sm text-gray-500 mb-2">
@@ -62,7 +62,7 @@ export default function Order() {
                   </li>
                 ))}
               </ul>
-              <div className="text-right font-semibold mt-2">
+              <div className="text-right text-orange-500 font-semibold mt-2">
                 Total: ₹{order.totalPrice}
               </div>
             </div>
