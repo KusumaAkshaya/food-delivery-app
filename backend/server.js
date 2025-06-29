@@ -9,7 +9,7 @@ const app = express()
 dotenv.config()
 app.use(cors(
   {
-    origin:["https://foodieexpress17.netlify.app/","https://food-delivery-app-wa8y.vercel.app", "https://food-delivery-app-drab.vercel.app/" , "http://localhost:3000/"],
+    origin:[ "https://food-delivery-app-drab.vercel.app"],
     credentials:true,
   }
 ));
