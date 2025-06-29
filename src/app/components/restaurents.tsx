@@ -2,16 +2,35 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {restaurentList} from '../data/restaurentData'
+import { useRef, useState, useEffect} from 'react'
+import { div } from 'framer-motion/client'
 
 export default function Restaurents()
-{
+{   
+     const [arrow, setArrow] = useState(true);
+     const filterRef = useRef<HTMLDivElement>(null);
+    
+     useEffect(() => {
+        const element = filterRef.current;
+        const checkOverflow = () => {
+           if(!element) return;
+           const isoverflow = element.scrollWidth > element.clientWidth;
+           const atEnd = element.scrollLeft + element.clientWidth >= element.scrollWidth - 5;
+           setArrow(isoverflow && !atEnd) 
+        }
+
+        element?.addEventListener("scroll", checkOverflow);
+        
+        checkOverflow();
+     }, [])
+
      return(
-        <div className="pt-10" >
+        <div className="pt-10 relative" >
             <div>
                <h2 className="pl-10 text-2xl font-bold " >Restaurents</h2>
             </div>
             <div>
-                <div className="flex flex-row p-10 overflow-x-scroll gap-10" >
+                <div ref={filterRef} className="flex flex-row p-10 overflow-x-scroll scrollbar-hide gap-10" >
                     {restaurentList.map((item, index) => (
                         <Link href={`/restaurant/${item.rname}`} key={index}>
                         
@@ -28,6 +47,9 @@ export default function Restaurents()
                         </div>
                         </Link>
                     ))}
+                    {arrow && (<div className='absolute right-2  top-1/2 bg-gray-500 text-white text-2xl p-3 rounded-full' >
+                        ➜
+                        </div>)}
                 </div>
             </div>
         </div>

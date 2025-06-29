@@ -76,10 +76,12 @@ export default function SearchData() {
         <section className="search bg-gray-100 min-h-screen ">
             <div>
                 <nav className="flex flex-row justify-between gap-4 mb-4 bg-white items-center shadow-md " >
-                    <Image src='/logo.jpg' alt="logo" width={150} height={50} />
+                    <Image src='/logo.jpg' alt="logo" width={150} height={50} className="hidden sm:block" />
                     <div className="w-100" > <SearchBar /></div>
+                    <div className="flex" >
                     <div className="text-3xl rounded-full hover:bg-gray-200 p-2" ><Link href='/cart' >🛒</Link></div>
-                    <div className=" rounded-full hover:bg-gray-200 p-2" ><Link href='/' >Home</Link></div>
+                    <div className=" rounded-full hover:bg-gray-200 p-2 text-3xl" ><Link href='/' >🏠︎</Link></div>
+                    </div>
                 </nav>
                 {message && (
                     <div className="fixed right-4 bg-green-500 text-white p-4 rounded shadow-lg text-sm animate-bounce z-50">{message}</div>
@@ -89,17 +91,17 @@ export default function SearchData() {
                 <div className="" >
                     {
                         !isLoggedIn ? (<p>Please <Link href='/login' className="text-gray-500" >Login</Link> before search</p>) :
-                            (  <div className="flex flow-row w-full justify-center" > 
+                            (  <div className="flex w-full lg:flex-row flex-col justify-center" > 
 
-                                <div className=" left-15 hidden lg:block min-w-75 text-center text-2xl" >
-                                            <aside className="overflow-auto bg-orange-100 h-screen" >
-                                                <h2 className="text-gray-600 border-b border-orange-500 py-4 text-3xl caveat mx-3" >Filters</h2>
-                                                <ul>
-                                                    <li className='py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({... prev, veg: !prev.veg}))}>Veg only</li>
-                                                    <li className='py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, buy1get1: !prev.buy1get1}))} >Buy 1 Get 1 free</li>
-                                                    <li className='py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, below250: !prev.below250}))}>Price below 250</li>
-                                                    <li className='py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, category: 'Desserts'}))}>Desserts</li>
-                                                    <li className='py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, category: 'Beverages'}))}>Beverages</li>
+                                <div className=" left-15 lg:block min-w-75 text-center text-2xl" >
+                                            <aside className="overflow-auto bg-orange-100 lg:h-screen" >
+                                                <h2 className="text-gray-600 border-b border-orange-500 py-4 text-3xl caveat mx-3 justify-center" >Filters</h2>
+                                                <ul className="flex lg:flex-col flex-row gap-2 overflow-x-auto scrollbar-hide" >
+                                                    <li className='min-w-30 py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({... prev, veg: !prev.veg}))}>Veg only</li>
+                                                    <li className='min-w-50 py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, buy1get1: !prev.buy1get1}))} >Buy 1 Get 1 free</li>
+                                                    <li className='min-w-50 py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, below250: !prev.below250}))}>Price below 250</li>
+                                                    <li className='min-w-30 py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, category: 'Desserts'}))}>Desserts</li>
+                                                    <li className='min-w-30 py-2 hover:scale-103 hover:underline hover:decoration-orange-500 underline-offset-4' onClick={() => setApplyFilter(prev => ({...prev, category: 'Beverages'}))}>Beverages</li>
                                                 </ul>
                                                  <button className='bg-red-500 text-white rounded hover:scale-110 px-3 py-1' onClick={() => setApplyFilter({veg: false, buy1get1: false, below250: false, category: ''})} >
                                                     Clear Filters
@@ -111,13 +113,14 @@ export default function SearchData() {
                                { filteredData.length > 0 ?
                                 (
                                     <div>
-                                        <h2 className="text-center text-gray-800 lobster-two-regular-italic capitalize" >Results for <span className="text-orange-500" >{query}</span> from top restaurants </h2>
+                                        <h2 className="text-center text-gray-800 lobster-two-regular-italic capitalize pt-2" >Results for <span className="text-orange-500" >{query}</span> from top restaurants </h2>
                                          <div className="flex flow-row w-full justify-center" >
                                         <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-flow-rows gap-6 p-4 justify-items-center" >
                                             {filteredData.map((item, index) => {
                                                 return (
                                                     <div className="bg-white px-4 pt-2 rounded-xl shadow hover:scale-105 duration-300 max-w-85 flex flex-col" key={index} >
-                                                        <div className="w-52 h-50 overflow-hidden">
+                                                        <div className="relative w-52 h-50 overflow-hidden">
+                                                            {item.offer && <div className="absolute top-0 left-0 bg-green-500 text-white text-sm px-1" >Buy1Get1</div>}
                                                             <Image src={item.image} alt="image" width={400} height={250} className="rounded-md object-fit-cover w-full h-full" />
                                                         </div>
                                                         <div className="mt-4 h-1/2" >
@@ -138,7 +141,7 @@ export default function SearchData() {
                                 ) :
                                 (   
                                     <div className="lg:w-5/10" >
-                                    <p className='text-center text-2xl'> No Matching dishes found</p>
+                                    <p className='text-center text-2xl pt-5'> No Matching dishes found</p>
                                     </div>
                                 )}
                                 

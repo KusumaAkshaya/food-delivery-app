@@ -3,6 +3,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from 'next/link'
 import { useRouter } from "next/navigation"
+import { motion } from 'framer-motion'
 
 const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
 
@@ -13,6 +14,7 @@ export default function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [load, setLoad] = useState(false);
 
     return (
 
@@ -37,25 +39,28 @@ export default function Register() {
                             },
                             body: JSON.stringify({ name, email, password }),
                         });
-
+                        setLoad(true);
                         const responseData = await res.json();
 
                         if (res.ok) {
+                            setLoad(false);
                             alert(responseData.message);
                             router.push('/');
                         }
                         else {
+                            setLoad(false);
                             alert(responseData.message);
                         }
                     }
                     catch (error) {
+                        setLoad(false);
                         alert('Something went wrong');
                         console.log("error: ", error);
                     }
                 }} >
                     <div className="flex flex-col" >
                         <label >Name</label>
-                        <input type="name" value={name} onChange={(e) => setName(e.target.value)} className="border-1 p-1 min-w-75 rounded-2xl " required/>
+                        <input type="name" value={name} onChange={(e) => setName(e.target.value)} className="border-1 p-1 min-w-75 rounded-2xl " required />
                     </div>
                     <div className="flex flex-col mb-3" >
                         <label >Email</label>
@@ -74,6 +79,18 @@ export default function Register() {
                             <p className="text-red-500 text-sm max-w-75">{error}</p>
                         )}
                     </div>
+
+                    {load && <div className="flex justify-center items-center mt-3 ">
+                        <motion.div
+                            className="border-t-4 border-gray-400 w-10 h-10 rounded-full "
+                            animate={{ rotate: 360 }}
+                            transition={{
+                                duration: 1.5,
+                                repeat: Infinity,
+                                ease: "linear",
+                            }}
+                        />
+                    </div>}
                     <button type="submit" className="text-white bg-gray-400 w-full rounded-2xl mt-3 p-1" >Create Account</button>
 
                     <p className="text-center mt-4" >Go back <Link href='/' className="text-gray-500" >Home</Link></p>
