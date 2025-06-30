@@ -29,7 +29,7 @@ export default function Order() {
 
     const fetchOrders = async () => {
       try {
-        const res = await fetch(`${baseUrl}/orders/${user}`);
+        const res = await fetch(`http://localhost:5000/orders/${user}`);
         const data = await res.json();
         if (data.success) {
           setOrders(data.orders);
@@ -43,7 +43,7 @@ export default function Order() {
   }, []);
 
   return (
-    <div className="p-10 bg-gray-100 flex flex-col justify-center items-center">
+    <div className="p-10 h-screen bg-gray-100 flex flex-col justify-center items-center">
       <h2 className="text-2xl font-bold mb-4 text-orange-500">Your Orders</h2>
        <p className="text-center mb-4" >Go back <Link href='/' className="text-gray-500" >Home</Link></p>
 

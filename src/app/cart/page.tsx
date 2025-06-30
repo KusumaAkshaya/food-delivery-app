@@ -66,7 +66,7 @@ const handlePlaceOrder = async (e: React.FormEvent) => {
   };
 
   try {
-    const response = await fetch(`${baseUrl}/orders/placeorder`, {
+    const response = await fetch(`http://localhost:5000/orders/placeorder`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -46,7 +46,7 @@ useEffect( () =>
                 setLoad(true);
                 try
                 {
-                   const res = await fetch(`${baseUrl}/users/login`, {
+                   const res = await fetch(`http://localhost:5000/users/login`, {
                     method: 'POST',
                     headers: {
                        'Content-Type': 'application/json',

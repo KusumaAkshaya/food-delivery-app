@@ -7,12 +7,10 @@ import orderRouter from './routers/orders.js';
 
 const app = express()
 dotenv.config()
-app.use(cors(
-  {
-    origin:[ "https://food-delivery-app-drab.vercel.app"],
-    credentials:true,
-  }
-));
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true,
+}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
